@@ -47,7 +47,7 @@
 
         //validate away any bad requests
         let urlRegex = /^((http|https):\/\/)?([A-z]+)\.dvusd.org\/?$/;
-        if (urlRegex.test(affectedSite)) {
+        if (urlRegex.test(param)) {
             affectedSite = param;
         }
 

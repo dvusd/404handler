@@ -16,6 +16,31 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <script type="text/javascript">
+        let affectedSite = 'www.dvusd.org';
+        let urlParams, param;
+        //check for params on the query string
+        if ('URLSearchParams' in window) {
+            urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('rhost')) {
+                param = urlParams.get('rhost');
+            } else if (urlParams.has('host')) {
+                param = urlParams.get('host');
+            }
+        }
+
+        //validate away any bad requests
+        let urlRegex = /^((http|https):\/\/)?([A-z]+)\.dvusd.org\/?$/;
+        if (urlRegex.test(affectedSite)) {
+            affectedSite = param;
+        }
+
+        //update our page
+        let el = document.getElementsByClassName('hostname');
+        if (el && el.length) {
+            el[0].setHTML(affectedSite);
+        }
+    </script>
     <div class="brand">
         <div class="elevation">
             <div class="logo"></div>

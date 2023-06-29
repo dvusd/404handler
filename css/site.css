@@ -1,0 +1,57 @@
+body {
+    background-color: #F9F8F3;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.elevation {
+    background-image: url(/images/background.png);
+    background-position: bottom left;
+    background-repeat: repeat-x;
+    height: 140px;
+}
+
+.logo {
+    background-image: url('/images/logo.png');
+    height: 137px;
+    width: 0px;
+}
+
+@media (min-width: 600px){
+    .logo {
+        float: left;
+        width: 415px;
+    }
+}
+@media (min-width: 330px) and (max-width: 599px){
+    .logo {
+        width: 130px;
+    }
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.site {
+    color: #484848;
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+h1 {
+    color: #584D50;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.hostname {
+    color: #2e6da4;
+}
